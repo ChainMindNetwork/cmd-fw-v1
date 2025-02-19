@@ -1,0 +1,36 @@
+{
+    "name": "chainmind-framework",
+    "version": "1.0.0",
+    "description": "chainmind ai agent framework",
+    "type": "module",
+    "main": "src/agent-trade.ts",
+    "scripts": {
+        "build": "tsc",
+        "list-agents": "npm run build && node --no-deprecation dist/list-agents.js",
+        "agent-talk": "npm run build && node --no-deprecation dist/agent-trade-talk.js",
+        "agent-token": "npm run build && node --no-deprecation dist/agent-trade-talk-token.js",
+        "watch-tokens": "npm run build && node --no-deprecation dist/agent-token-creation-talk.js",
+        "watch-token-trades": "npm run build && node --no-deprecation dist/agent-token-trade-stream-talk.js",
+        "watch-account-trades": "npm run build && node --no-deprecation dist/account-trade-stream-talk.js",
+        "watch-liquidity": "npm run build && node --no-deprecation dist/raydium-liquidity-stream-talk.js"
+    },
+    "dependencies": {
+        "@solana/web3.js": "^1.98.0",
+        "@types/form-data": "^2.5.2",
+        "bs58": "^6.0.0",
+        "dotenv": "^16.4.7",
+        "firebase": "^11.1.0",
+        "form-data": "^4.0.1",
+        "node-fetch": "^3.3.2",
+        "openai": "^4.77.3",
+        "punycode": "^2.3.1",
+        "ws": "^8.16.0"
+    },
+    "devDependencies": {
+        "@types/node-fetch": "^2.6.12",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.7.3",
+        "@types/ws": "^8.5.10"
+    }
+}
